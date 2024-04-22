@@ -1,5 +1,13 @@
+-- SQL Coding challenge 
+-- Car Rental System
+
+-- Create Database
 create database Car_Rental;
+
+-- Use the database
 use car_Rental;
+
+-- Creating Tables
 CREATE TABLE Vehicle (
     vehicleID INT PRIMARY KEY,
     make VARCHAR(50),
@@ -38,6 +46,7 @@ CREATE TABLE Payment (
     FOREIGN KEY (leaseID) REFERENCES Lease(leaseID)
 );
 
+-- Inserting values into Tables
 INSERT INTO Vehicle (vehicleID, make, model, year, dailyRate, status, passengerCapacity, engineCapacity)
 VALUES
     (1, 'Toyota', 'Camry', 2022, 50.00, 'available', 4, 1450),
@@ -75,7 +84,7 @@ VALUES
     (7, 7, 7, '2023-07-01', '2023-07-10', 'Daily'),
     (8, 8, 8, '2023-08-12', '2023-08-15', 'Monthly'),
     (9, 3, 3, '2023-09-07', '2023-09-10', 'Daily'),
-    (10, 10, 10, '2023-10-10', '2023-10-31', 'Monthly');
+    (10, 10, 10, '2023-10-10', '2024-10-31', 'Yearly');
 
 INSERT INTO Payment (paymentID, leaseID, paymentDate, amount)
 VALUES
@@ -88,7 +97,7 @@ VALUES
     (7, 7, '2023-07-03', 40.00),
     (8, 8, '2023-08-14', 1100.00),
     (9, 9, '2023-09-09', 80.00),
-    (10, 10, '2023-10-25', 1500.00);
+    (10, 10, '2023-10-25', 19,710.00);
     
     -- Queries 
     -- 1. Update the daily rate for a Mercedes car to 68.
